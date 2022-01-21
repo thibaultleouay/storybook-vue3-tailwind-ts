@@ -1,10 +1,9 @@
 /// <reference types="vitest" />
 
+import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import Components from "unplugin-vue-components/vite";
-
-import { resolve } from 'path'
+import Components from 'unplugin-vue-components/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -13,23 +12,24 @@ export default defineConfig({
       // @/xxxx => src/xxxx
       {
         find: /^@\/(.+)/,
-        replacement: `${resolve(__dirname, 'src')}/$1`
+        replacement: `${resolve(__dirname, 'src')}/$1`,
       },
       // #/xxxx => types/xxxx
       {
         find: /^#\/(.+)/,
-        replacement: `${resolve(__dirname, 'types')}/$1`
-      }
-    ]
-
+        replacement: `${resolve(__dirname, 'types')}/$1`,
+      },
+    ],
   },
   test: {
-    environment: "jsdom",
+    environment: 'jsdom',
   },
-  plugins: [vue(),
-  Components({
-    dirs: ["./src/components"],
-  }),],
+  plugins: [
+    vue(),
+    Components({
+      dirs: ['./src/components'],
+    }),
+  ],
   build: {
     sourcemap: true,
     // lib: {
@@ -47,10 +47,9 @@ export default defineConfig({
         // for externalized deps
         exports: 'named',
         globals: {
-          vue: 'Vue'
-        }
+          vue: 'Vue',
+        },
       },
-
     },
   },
 })

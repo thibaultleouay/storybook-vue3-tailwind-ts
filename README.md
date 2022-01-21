@@ -3,6 +3,7 @@
 This template should help get you started developing a Vue 3 component library.
 
 more soon
+
 ## Recommended IDE Setup
 
 - [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)

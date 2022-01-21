@@ -1,4 +1,3 @@
-
 <template>
   <div class="border-8 border-red-300">
     <h1>Example component with VUE 3 and TS AND TAILWIND</h1>
@@ -10,20 +9,18 @@
     </p>
   </div>
 </template>
- 
+
 <script lang="ts" setup>
-
-
 defineProps({
-    someProp: {
-      type: String,
-      default: "Something value",
-    },
-    otherProp: {
-      type: Number,
-      default: 33,
-    },
-  })
+  someProp: {
+    type: String,
+    default: 'Something value',
+  },
+  otherProp: {
+    type: Number,
+    default: 33,
+  },
+})
 </script>
 
 <style></style>
